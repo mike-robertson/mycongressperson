@@ -1,0 +1,59 @@
+
+.box {
+    margin: 10px 0px;
+    color: #2B2B2E;
+    background-color: transparent;//#EEE;
+    padding: 10px;
+}
+
+.democrat {
+    background-color: #3333FF;
+}
+
+.independant {
+    background-color: #993399;
+}
+
+.republican {
+    background-color: #FF3333;
+}
+
+.square {
+    width: 40px;
+    height: 80px;
+    display: table;
+    margin: 0 10px 0 0;
+}
+
+.chamber {
+    text-transform: capitalize;
+}
+
+.box ul {
+    margin: 0;
+    padding: 0;
+}
+
+.box li {
+    font-size: 30px;
+    list-style: none;
+}
+
+.margin-bottom-small {
+    margin-bottom: 5px;
+}
+
+li > a.btn {
+    margin: 5px 0;
+    -webkit-box-shadow: 1px 1px 0px rgba(4, 4, 4, 0.6);
+    -moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.6);
+    box-shadow:         1px 1px 0px rgba(4, 4, 4, 0.6);
+    border-radius:0;
+}
+
+li > a.btn:active {
+    margin-top: 6px;
+    margin-left: 1px;
+    margin-bottom: 4px;
+    margin-right: -1px;
+}

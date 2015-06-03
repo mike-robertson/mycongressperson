@@ -1,0 +1,52 @@
+.rightCaret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-left: 8px solid;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+}
+
+.downCaret {  
+	display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.slideable-content {
+  margin:0 !important; 
+  padding:0 !important;
+  overflow: hidden;
+  height: 0px;
+  width: auto;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  display: inline-block;
+
+}
+
+// .ng-hide-add.voting-information {
+//   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+// }
+
+// .ng-hide-remove.voting-information {
+//   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+// }

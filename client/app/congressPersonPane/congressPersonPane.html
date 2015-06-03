@@ -1,0 +1,34 @@
+<div class=" box col-xs-12">
+  <ul>
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <li>
+        <div class = "square pull-left" ng-class="{republican: congressPerson.party === 'R', democrat: congressPerson.party === 'D', independant: congressPerson.party === 'I'}"></div>
+        {{congressPerson.first_name}} <br class="big-screen-line-break"> {{congressPerson.last_name}}
+      </li>
+      <li class="">({{congressPerson.party}}) {{congressPerson.term_start | date : 'yyyy'}} - {{congressPerson.term_end | date : 'yyyy'}}</li>
+      <li class="chamber">
+        {{congressPerson.chamber}} ({{congressPerson.state}}<span ng-hide="congressPerson.chamber === 'senate'"> - {{congressPerson.district}}</span>)
+      </li> 
+    </div>
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <li class="medium-font">
+        <a class="btn btn-primary btn-call col-xs-12" href="tel:{{congressPerson.phone}}">
+          <span class="glyphicon glyphicon-earphone small-margin-right"></span>{{congressPerson.phone}}
+        </a>
+      </li>
+      <li class="medium-font">
+        <a class="btn btn-primary col-xs-12" href="mailto:{{congressPerson.oc_email}}" >
+          <span class="glyphicon glyphicon-envelope small-margin-right"></span>Email {{congressPerson.first_name}} {{congressPerson.last_name}}
+        </a>
+      </li>
+      <li class="medium-font">
+        <a class="btn btn-primary col-xs-12" href="{{congressPerson.contact_form}}" target="_blank">Contact {{congressPerson.first_name}} {{congressPerson.last_name}}</a>
+      </li>
+      <li>
+        <a class="btn btn-primary col-xs-12" href="{{congressPerson.website}}" target="_blank">{{congressPerson.first_name}} {{congressPerson.last_name}}'s Website</a>
+      </li>
+    </div>
+  </ul>  
+  <vote-record representative="congressPerson.bioguide_id"></vote-record>
+</div>

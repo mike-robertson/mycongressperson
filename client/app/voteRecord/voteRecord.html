@@ -1,0 +1,67 @@
+
+<div class="medium-font pointer slider col-xs-12" ng-click="toggleVoteInfo($event);">
+	<span ng-class="{downCaret: caretDown, rightCaret: !caretDown}"></span>
+	Voting Record
+</div>
+<div class="slideable-content">
+  <div class="spinner" ng-show="isPageLoading(pageNumber)"></div>
+  <div ng-show="!isPageLoading(pageNumber)">
+  	<div class="col-xs-12">
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-left no-margin" ng-click="previousPage()"></span>
+	  	<span class=" col-lg-10 col-xs-8 medium-font text-center">{{pageNumber}}</span>
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-right no-margin" ng-click="nextPage()"></span>
+  	</div>
+		<div class="box small-font col-xs-12" ng-repeat="item in voteInfo" on-finish-render="ngRepeatFinsished">
+			<div>Vote: {{item.roll_id}}</div>
+			<div>Bill: {{item.bill.bill_id}}</div>
+
+			<div>Title: {{item.bill.official_title}}</div>
+			<div>{{item.bill.popular_title}}</div>
+			<div>{{item.bill.short_title}}</div>
+			<a href="{{item.bill.urls.congress}}">congress.gov Data</a>
+			<div>{{item.voters.voter.first_name}} {{item.voters.voter.last_name}}'s Vote: {{item.voters.vote}}</div>
+			<div>Result: {{item.result}}</div>
+	<!-- 		voteInfo.breakdown.party.D/R/I.Nay/Not Present/Present/Yea
+			voteInfo.breakdown.total.Nay/Not Present/Present/Yea
+			voter object contains bioguide id
+				that object (bioguide id).vote -->
+		</div>
+  	<div class="col-xs-12">
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-left no-margin" ng-click="previousPage()"></span>
+	  	<span class=" col-lg-10 col-xs-8 medium-font text-center">{{pageNumber}}</span>
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-right no-margin" ng-click="nextPage()"></span>
+  	</div>
+	</div>
+</div>
+
+<!-- 
+<div>
+	<div class="medium-font pointer col-xs-12" ng-click="toggleVoteInfo();">
+		<span ng-class="{downCaret: caretDown, rightCaret: !caretDown}"></span>
+		Voting Record
+	</div>
+  <div class="spinner" ng-show="isPageLoading(pageNumber) && caretDown"></div>
+  <div ng-show="caretDown && !isPageLoading(pageNumber)">
+  	<div class="col-xs-12">
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-left no-margin" ng-click="previousPage()"></span>
+	  	<span class=" col-lg-10 col-xs-8 medium-font text-center">{{pageNumber}}</span>
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-right no-margin" ng-click="nextPage()"></span>
+  	</div>
+		<div class="box small-font col-xs-12" ng-repeat="item in voteInfo">
+			<div>Vote: {{item.roll_id}}</div>
+			<div>Bill: {{item.bill.bill_id}}</div>
+
+			<div>Title: {{item.bill.official_title}}</div>
+			<div>{{item.bill.popular_title}}</div>
+			<div>{{item.bill.short_title}}</div>
+			<a href="{{item.bill.urls.congress}}">congress.gov Data</a>
+			<div>{{item.voters.voter.first_name}} {{item.voters.voter.last_name}}'s Vote: {{item.voters.vote}}</div>
+			<div>Result: {{item.result}}</div>
+		</div>
+  	<div class="col-xs-12">
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-left no-margin" ng-click="previousPage()"></span>
+	  	<span class=" col-lg-10 col-xs-8 medium-font text-center">{{pageNumber}}</span>
+	  	<span class=" col-lg-1 col-xs-2 btn btn-primary glyphicon glyphicon-chevron-right no-margin" ng-click="nextPage()"></span>
+  	</div>
+	</div>
+</div> -->

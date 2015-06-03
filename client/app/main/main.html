@@ -1,0 +1,22 @@
+<!-- <div ng-include="'components/navbar/navbar.html'"></div> -->
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Your Congress Info</h1>
+    <h4>Powered by SunlightAPI</h4>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="col-md-8">
+  	<div class="spinner" ng-show="ctrl.loading"></div>
+	  <div class="" ng-repeat="rep in ctrl.repArray">
+	    <congress-person-pane info="rep"></congress-person-pane>
+	  </div>
+  </div>
+  <address-form class="col-md-4" controller="ctrl"></address-form>
+</div>
+
+<footer class="footer">
+  
+</footer>
